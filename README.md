@@ -4,4 +4,4 @@ This project is a simple pizza ordering form built using HTML and CSS only. It a
 # Members: 
 -Jessa Mae Mancera, 
 -Mark Louie Morales, 
--Taronga
+-Lawrence Johnkiel Taronga

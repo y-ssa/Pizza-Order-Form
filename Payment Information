@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Payment Information</title>
+  </head>
+
+  <body>
+    <h2>Payment Information</h2>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Payment Details</legend>
+
+        <label for="paymentmethod">Payment Method:</label><br>
+        <select id="paymentmethod" name="paymentmethod" required>
+          <option value="">--Select Payment Method--</option>
+          <option value="creditcard">Credit Card</option>
+          <option value="gcash">GCash</option>
+          <option value="cashondelivery">Cash on Delivery</option>
+        </select>
+
+        <br><br>
+
+        <label for="cardnumber">
+          Card Number (Required for Credit Card only):
+        </label><br>
+        <input
+          type="text"
+          id="cardnumber'
+          name="cardnumber"
+          pattern="[0-9]{16}"
+          placeholder="1234567890123456"
+          title="Please enter exactly 16 digits (numbers only, no spaces)">
+
+        <br><br>
+
+        <button type="submit">Submit Payment</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

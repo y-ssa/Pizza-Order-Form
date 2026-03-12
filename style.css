@@ -1,0 +1,185 @@
+/* Default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Sedan", serif;
+}
+body {
+  background: black;
+}
+
+/* Header */
+.header {
+  background-color: #997950;
+  padding: 10px;
+  text-align: center;
+}
+.header h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Pizza by the slice Banner */
+.banner {
+  background: url("banner.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.banner h1 {
+  font-size: 5.5em;
+  margin-bottom: 10px;
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
+  word-spacing: -40px;
+  letter-spacing: -8px;
+}
+.banner p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Sidebar and form contents */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: stretch;
+}
+.sidebar {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background-color: #232323;
+  padding: 20px;
+  color: white;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+.content {
+  flex: 3 1 600px;
+  padding: 20px;
+  color: white;
+  text-align: justify;
+  margin-left: 20px;
+}
+.content h2,
+.sidebar h2 {
+  margin-top: 50px;
+}
+.content h2 {
+  margin-bottom: 10px;
+}
+.sidebar h2 {
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.sidebar p {
+  margin-bottom: 10px;
+}
+.sidebar h2.contact,
+.sidebar h2.owners-heading {
+  margin-top: 80px;
+}
+.sidebar h2.owners-heading {
+  word-spacing: -10px;
+  letter-spacing: -2px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 50%;
+  padding: 8px;
+  margin-top: 2px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.form-check-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex-grow: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #997950;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button[type="reset"] {
+  background-color: #555;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+fieldset {
+  border: 1px solid #997950;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+legend {
+  color: #997950;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #997950;
+  color: black;
+}

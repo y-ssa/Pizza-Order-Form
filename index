@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Order Form</title>
-  </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza By The Slice: Order Form</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Sedan:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
   <body>
-      <main>
+    <header class="header">
+      <h1>ORDER FORM</h1>
+    </header>
+
+    <header class="banner">
+      <h1>PIZZA by the SLICE</h1>
+      <p>The pizza-way to bring people together</p>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h2>OUR HISTORY</h2>
+        <p>
+          PIZZA by the SLICE started as a small dream back in 2000. It was
+          founded by three people who just wanted to share their love for good
+          pizza. Started in a tiny kitchen with only a single oven and a handful
+          of recipes, it has grown into people's favorite spot over the years.
+          You’ll still find the same fresh ingredients and the same passion that
+          was there on the very first day. Because every pizza is a way to bring
+          people together.
+        </p>
+
+        <h2 class="contact">CONTACT US</h2>
+        <p>
+          Feel free to contact us for orders and reservations. <br />
+          <strong>Address:</strong> 112 Third Laboratory, WeST City<br />
+          <strong>Phone:</strong> +639123456789<br />
+          <strong>Email:</strong> bsit2b@bicol-u.edu.ph
+        </p>
+
+        <h2 class="owners-heading">THE PIZZA MAKERS</h2>
+        <p>
+          Jessa Mae Mancera<br />
+          Mark Louie Morales<br />
+          Lawrence Johnkiel Taronga
+        </p>
+      </aside>
+
+      <main class="content">
         <form>
           <h2>PERSONAL DETAILS</h2>
-          <label for="fullname">Full Name:</label><br />
+          <label for="fullname">Full Name:</label>
           <input
             type="text"
             id="fullname"
@@ -18,21 +63,21 @@
             required
             minlength="5"
             maxlength="60"
-          /><br /><br />
+          /><br />
 
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
 
-          <label for="phone">Phone Number:</label><br />
+          <label for="phone">Phone Number:</label>
           <input
             type="tel"
             id="phone"
             name="phone"
             required
             pattern="[0-9]{7,11}"
-          /><br /><br />
+          /><br />
 
-          <label for="age">Age:</label><br />
+          <label for="age">Age:</label>
           <input
             type="number"
             id="age"
@@ -40,28 +85,36 @@
             required
             min="13"
             max="99"
-          /><br /><br />
+          /><br />
 
           <h2>PIZZA SIZE</h2>
-          <input type="radio" id="small" name="pizza_size" value="small" />
-          <label for="small">Small</label><br />
-          <input
-            type="radio"
-            id="medium"
-            name="pizza_size"
-            value="medium"
-            checked
-          />
-          <label for="medium">Medium</label><br />
-          <input type="radio" id="large" name="pizza_size" value="large" />
-          <label for="large">Large</label><br />
-          <input
-            type="radio"
-            id="extralarge"
-            name="pizza_size"
-            value="extralarge"
-          />
-          <label for="extralarge">Extra Large</label><br /><br />
+          <div class="form-check-item">
+            <input type="radio" id="small" name="pizza_size" value="small" />
+            <label for="small">Small</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="radio"
+              id="medium"
+              name="pizza_size"
+              value="medium"
+              checked
+            />
+            <label for="medium">Medium</label>
+          </div>
+          <div class="form-check-item">
+            <input type="radio" id="large" name="pizza_size" value="large" />
+            <label for="large">Large</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="radio"
+              id="extralarge"
+              name="pizza_size"
+              value="extralarge"
+            />
+            <label for="extralarge">Extra Large</label>
+          </div>
 
           <h2>CRUST TYPE</h2>
           <select id="crust" name="crust" required>
@@ -70,7 +123,7 @@
             <option value="thick">Thick</option>
             <option value="stuffed">Stuffed</option>
             <option value="gluten-free">Gluten-Free</option></select
-          ><br /><br />
+          ><br />
 
           <h2>PIZZA SAUCE</h2>
           <select id="sauce" name="sauce" required>
@@ -82,77 +135,129 @@
               <option value="pesto">Pesto</option>
               <option value="barbecue">Barbecue</option>
             </optgroup></select
-          ><br /><br />
+          ><br />
 
           <h2>PIZZA TOPPINGS</h2>
 
-          <input type="checkbox" id="cheese" name="topping" value="cheese" checked disabled>
-          <label for="cheese">Cheese (Always Included)</label><br><br>
-
-          <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
-          <label for="pepperoni">Pepperoni</label><br><br>
-
-          <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
-          <label for="mushrooms">Mushrooms</label><br><br>
-
-          <input type="checkbox" id="onions" name="topping" value="onions">
-          <label for="onions">Onions</label><br><br>
-
-          <input type="checkbox" id="bellpepper" name="topping" value="bellpepper">
-          <label for="bellpepper">Bell Pepper</label><br><br>
-
-          <input type="checkbox" id="olives" name="topping" value="olives">
-          <label for="olives">Olives</label><br><br>
-
-          <input type="checkbox" id="bacon" name="topping" value="bacon">
-          <label for="bacon">Bacon</label><br><br>
-
-          <input type="checkbox" id="pineapple" name="topping" value="pineapple" title="Warning: Pineapple on pizza is controversial!">
-          <label for="pineapple">Pineapple</label><br><br>
+          <div class="form-check-item">
+            <input
+              type="checkbox"
+              id="cheese"
+              name="topping"
+              value="cheese"
+              checked
+              disabled
+            />
+            <label for="cheese">Cheese (Always Included)</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="checkbox"
+              id="pepperoni"
+              name="topping"
+              value="pepperoni"
+            />
+            <label for="pepperoni">Pepperoni</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="checkbox"
+              id="mushrooms"
+              name="topping"
+              value="mushrooms"
+            />
+            <label for="mushrooms">Mushrooms</label>
+          </div>
+          <div class="form-check-item">
+            <input type="checkbox" id="onions" name="topping" value="onions" />
+            <label for="onions">Onions</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="checkbox"
+              id="bellpepper"
+              name="topping"
+              value="bellpepper"
+            />
+            <label for="bellpepper">Bell Pepper</label>
+          </div>
+          <div class="form-check-item">
+            <input type="checkbox" id="olives" name="topping" value="olives" />
+            <label for="olives">Olives</label>
+          </div>
+          <div class="form-check-item">
+            <input type="checkbox" id="bacon" name="topping" value="bacon" />
+            <label for="bacon">Bacon</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="checkbox"
+              id="pineapple"
+              name="topping"
+              value="pineapple"
+              title="Warning: Pineapple on pizza is controversial!"
+            />
+            <label for="pineapple">Pineapple</label>
+          </div>
 
           <h2>DELIVERY METHOD</h2>
-        
-          <input type="radio" id="delivery" name="deliverymethod" value="homedelivery">
-          <label for="delivery">Home Delivery</label><br><br>
-        
-          <input type="radio" id="pickup" name="deliverymethod" value="storepick-up">
-          <label for="pickup">Store Pick-up</label>
 
-          <br>
+          <div class="form-check-item">
+            <input
+              type="radio"
+              id="delivery"
+              name="deliverymethod"
+              value="homedelivery"
+            />
+            <label for="delivery">Home Delivery</label>
+          </div>
+          <div class="form-check-item">
+            <input
+              type="radio"
+              id="pickup"
+              name="deliverymethod"
+              value="storepick-up"
+            />
+            <label for="pickup">Store Pick-up</label> <br />
+            <br />
+          </div>
 
-          <label for="address">Delivery Address:</label><br>
-          <textarea id="address" name="address" rows="4" placeholder="Enter your delivery address here..."></textarea>
-
-          <br><br>
+          <label for="address">Delivery Address:</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="4"
+            placeholder="Enter your delivery address here..."
+          ></textarea
+          ><br />
 
           <h2>PAYMENT INFORMATION</h2>
 
           <fieldset>
             <legend>Payment Details</legend>
 
-            <label for="paymentmethod">Payment Method:</label><br>
+            <label for="paymentmethod">Payment Method:</label><br />
             <select id="paymentmethod" name="paymentmethod" required>
               <option value="">--Select Payment Method--</option>
               <option value="creditcard">Credit Card</option>
               <option value="gcash">GCash</option>
-              <option value="cashondelivery">Cash on Delivery</option>
-            </select>
-
-            <br><br>
+              <option value="cashondelivery">Cash on Delivery</option></select
+            ><br /><br />
 
             <label for="cardnumber">
-              Card Number (Required for Credit Card only):
-            </label><br>
+              Card Number (Required for Credit Card only): </label
+            ><br />
             <input
               type="text"
               id="cardnumber"
               name="cardnumber"
               pattern="[0-9]{16}"
               placeholder="1234567890123456"
-              title="Please enter exactly 16 digits (numbers only, no spaces)">
+              title="Please enter exactly 16 digits (numbers only, no spaces)"
+            /><br />
           </fieldset>
 
-          <br><br>
+          <br />
 
           <h2>ORDER SUMMARY</h2>
 
@@ -189,13 +294,14 @@
             </tbody>
           </table>
 
-          <br><br>
+          <br /><br />
 
-          <button type="submit">Place My Order</button>
-          <button type="reset">Start Over</button>
+          <div class="form-buttons">
+            <button type="submit">Place My Order</button>
+            <button type="reset">Start Over</button>
+          </div>
         </form>
       </main>
     </div>
-
   </body>
 </html>

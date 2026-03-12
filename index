@@ -2,14 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Information</title>
   </head>
 
   <body>
-    <h2>Payment Information</h2>
+    <h2>Select Your Pizza Toppings</h2>
 
-    <form action="#" method="post">
+    <form>
+      <input type="checkbox" name="topping" value="cheese" checked disabled>
+      <label>Cheese (Always Included)</label><br><br>
+
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label><br><br>
+
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label><br><br>
+
+      <input type="checkbox" id="onions" name="topping" value="onions">
+      <label for="onions">Onions</label><br><br>
+
+      <input type="checkbox" id="bellpepper" name="topping" value="bellpepper">
+      <label for="bellpepper">Bell Pepper</label><br><br>
+
+      <input type="checkbox" id="olives" name="topping" value="olives">
+      <label for="olives">Olives</label><br><br>
+
+      <input type="checkbox" id="bacon" name="topping" value="bacon">
+      <label for="bacon">Bacon</label><br><br>
+
+      <input type="checkbox" id="pineapple" name="topping" value="pineapple" title="Warning: Pineapple on pizza is controversial!">
+      <label for="pineapple">Pineapple</label><br><br>
+
+    <fieldset>
+      <legend>Delivery Method</legend>
+  
+      <input type="radio" id="delivery" name="deliverymethod" value="homedelivery">
+      <label for="delivery">Home Delivery</label><br><br>
+  
+      <input type="radio" id="pickup" name="deliverymethod" value="storepick-up">
+      <label for="pickup">Store Pick-up</label>
+    </fieldset>
+
+    <br>
+
+    <label for="address">Delivery Address:</label><br>
+    <textarea id="address" name="address" rows="4" placeholder="Enter your delivery address here..."></textarea>
+
+    <h2>Payment Information</h2>
 
       <fieldset>
         <legend>Payment Details</legend>
@@ -29,13 +69,48 @@
         </label><br>
         <input
           type="text"
-          id="cardnumber'
+          id="cardnumber"
           name="cardnumber"
           pattern="[0-9]{16}"
           placeholder="1234567890123456"
           title="Please enter exactly 16 digits (numbers only, no spaces)">
 
         <br><br>
+
+        <h2>Order Summary (Price Reference Only)</h2>
+
+        <table border="1" cellpadding="8">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Base Price</th>
+              <th>Extra Toppings (each)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Small</td>
+              <td>Php 199.00</td>
+              <td>+Php 20.00</td>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>Php 299.00</td>
+              <td>+Php 25.00</td>
+            </tr>
+            <tr>
+              <td>Large</td>
+              <td>Php 399.00</td>
+              <td>+Php 30.00</td>
+            </tr>
+            <tr>
+              <td>Extra Large</td>
+              <td>Php 499.00</td>
+              <td>+Php 35.00</td>
+            </tr>
+          </tbody>
+        </table>
 
         <button type="submit">Submit Payment</button>
       </fieldset>

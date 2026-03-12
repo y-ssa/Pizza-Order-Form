@@ -112,6 +112,8 @@
           </tbody>
         </table>
 
+        <br><br>
+
         <button type="submit">Submit Payment</button>
       </fieldset>
     </form>
